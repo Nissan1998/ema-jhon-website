@@ -23,8 +23,9 @@
   color: #0e161a;
 }
 .product-info {
-  margin: 7px;
-  padding: 5%;
+  margin-bottom: 12px;
+  padding-bottom: 5%;
+  padding-left: 7px;
 }
 .btn-cart {
   width: 100%;
