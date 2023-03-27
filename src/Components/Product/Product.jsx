@@ -6,8 +6,14 @@ const Product = (props) => {
   const { category, id, img, price, name, ratings, seller } = props.product;
   return (
     <div className="product">
-      <img src={img} alt="" />
-      <h5>{name}</h5>
+      <img src={img ? img : "not Available"} alt="" />
+      <div className="product-info">
+        <h5 className="product-name">{name}</h5>
+        <p> price $:{price}</p>
+        <p>Manufacturer:{seller}</p>
+        <p>Rating: {ratings} stars</p>
+      </div>
+      <button className="btn-cart">Add to Cart</button>
     </div>
   );
 };
