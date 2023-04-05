@@ -1,8 +1,8 @@
 .cart-container {
-  height: 800px;
+  height: 500px;
   padding: 3px;
   margin-top: 5rem;
-  background-color: bisque;
+  /* background-color: bisque; */
   border-radius: 1rem;
   margin-left: 1rem;
   position: sticky;
@@ -10,4 +10,6 @@
 }
 .cart-container p {
   font-size: 15px;
+  color: black;
+  font-weight: bold;
 }

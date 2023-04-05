@@ -1,10 +1,47 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Home from "./Components/Layout/Home";
+import Shop from "./Components/shop/Shop";
+import Order from "./Components/Order/Order";
+import Inventory from "./Components/Inventory/Inventory";
+import Login from "./Components/Login/Login";
+import OrderSummary from "./Components/OrderSummary/OrderSummary";
+import cartProductLoader from "./Loaders/CarProductsLoader";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home></Home>,
+    children: [
+      {
+        path: "/",
+        element: <Shop></Shop>,
+      },
+      {
+        path: "order",
+        element: <Order></Order>,
+      },
+      {
+        path: "review",
+        element: <OrderSummary></OrderSummary>,
+        loader: cartProductLoader,
+      },
+      {
+        path: "manage inventory",
+        element: <Inventory></Inventory>,
+      },
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+    ],
+  },
+]);
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);

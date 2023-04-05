@@ -8,7 +8,7 @@ const Cart = ({ cart }) => {
   for (const product of cart) {
     // product.quantity = product.quantity || 1;
     total = total + product.price * product.quantity;
-    totalShipping = totalShipping + product.shipping;
+    totalShipping = totalShipping + product.shipping * product.quantity;
     quantity = quantity + product.quantity;
   }
   const tax = (total * 7) / 100;
@@ -22,7 +22,16 @@ const Cart = ({ cart }) => {
         <p>Total Price:-${total}</p>
         <p>Total Shipping Charge:- ${totalShipping} </p>
         <p>Tax:- ${roundTax}</p>
-        <h6 style={{ fontSize: 16 }}>Grand Total: ${grandTotal}</h6>
+        <h6
+          style={{
+            fontSize: 16,
+            backgroundColor: "#ffe0b3",
+            padding: 6,
+            width: 200,
+          }}
+        >
+          Grand Total: ${grandTotal}
+        </h6>
       </div>
     </div>
   );
