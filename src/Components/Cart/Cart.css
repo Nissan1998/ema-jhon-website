@@ -1,7 +1,7 @@
 .cart-container {
   height: 500px;
   padding: 3px;
-  margin-top: 5rem;
+  margin-top: 3rem;
   /* background-color: bisque; */
   border-radius: 1rem;
   margin-left: 1rem;
@@ -12,4 +12,13 @@
   font-size: 15px;
   color: black;
   font-weight: bold;
+}
+.btn-clearCart {
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgb(243, 67, 67);
 }
