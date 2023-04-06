@@ -9,7 +9,6 @@ const Header = () => {
       <img src={logo} alt="" />
       <div className="anchor">
         <Link to="/">Shop</Link>
-        <Link to="/order">Order</Link>
         <Link to="/review">Order Review</Link>
         <Link to="/manage inventory">Manage Inventory</Link>
         <Link to="/login">Login</Link>
