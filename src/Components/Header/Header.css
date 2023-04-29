@@ -14,3 +14,10 @@
 .anchor a:hover {
   color: lightcoral;
 }
+.user-name {
+  color: yellow;
+  margin-left: 2rem;
+}
+.signOut-btn {
+  margin-left: 2rem;
+}
