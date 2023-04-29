@@ -53,6 +53,7 @@
 .btn-submit:hover {
   background-color: rgb(248, 174, 62);
 }
-.text-error {
-  color: rgb(243, 52, 52);
+.showpass {
+  position: relative;
+  top: 200px;
 }

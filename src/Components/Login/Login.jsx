@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
+  const [show, setShow] = useState(false);
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -44,12 +45,17 @@ const Login = () => {
         <div className="form-control">
           <label htmlFor="password">Password</label>
           <input
-            type="password"
+            type={show ? "text" : "password"}
             name="password"
             required
             id=""
             placeholder="Password"
           />
+          <p onClick={() => setShow(!show)}>
+            <small>
+              {show ? <span>Hide PassWord</span> : <span>Show Password</span>}
+            </small>
+          </p>
           <p>
             <small>
               Are you New To Ema-jhon?
